@@ -8,7 +8,7 @@ const NavbarIcon = (): ReactNode => {
         <>
             <Container>
                 <Icon src={ boschIcon } alt="Bosch"/>
-                <Typography variant="span">Blog</Typography>
+                <Typography fontSize="lg" fontWeight="bold" variant="span">Blog</Typography>
             </Container>
         </>
     );

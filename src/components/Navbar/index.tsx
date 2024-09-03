@@ -1,12 +1,13 @@
 import { ReactNode } from "react";
 import { Nav } from "./style";
+import NavbarIcon from "../NavbarIcon";
+import SearchBar from "../SearchBar";
 
 const Navbar = (): ReactNode => {
     return (
         <Nav className="bg-blue-400 text-white">
-            <span>Teste</span>
-            <span>Teste</span>
-            <span>Teste</span>
+            <NavbarIcon/>
+            <SearchBar placeholder="Pesquise aqui..."/>
         </Nav>
     );
 };
