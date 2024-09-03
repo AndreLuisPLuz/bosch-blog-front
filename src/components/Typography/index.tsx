@@ -41,7 +41,7 @@ const PTypography = (props: TypographyProps): ReactNode => {
     const {size, weight, style} = fetchStyle(props);
 
     return (
-        <p className={`${size} ${weight} ${style}`}>{ props.children }</p>
+        <p className={`${size} ${weight} ${style} h-fit`}>{ props.children }</p>
     );
 };
 
@@ -49,7 +49,7 @@ const SpanTypography = (props: TypographyProps): ReactNode => {
     const {size, weight, style} = fetchStyle(props);
 
     return (
-        <span className={`${size} ${weight} ${style}`}>{ props.children }</span>
+        <span className={`${size} ${weight} ${style} h-fit`}>{ props.children }</span>
     );
 };
 

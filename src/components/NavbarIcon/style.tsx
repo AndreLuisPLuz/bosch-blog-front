@@ -1,12 +1,13 @@
 import styled from "styled-components";
 
 const Container = styled.div`
-    height: fit-content;
+    height: 100%;
     width: fit-content;
 
     display: flex;
     flex-direction: row;
-    gap: 2rem;
+    align-items: center;
+    gap: 1rem;
 `;
 
 const Icon = styled.img`
