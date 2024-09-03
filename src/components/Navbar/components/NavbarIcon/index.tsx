@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import boschIcon from "../../assets/bosch.svg";
+import boschIcon from "../../../../assets/bosch.svg";
 import { Container, Icon } from "./style";
 import Typography from "../../../Typography";
 
