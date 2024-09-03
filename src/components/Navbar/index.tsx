@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import { Nav } from "./style";
-import NavbarIcon from "../NavbarIcon";
-import SearchBar from "../SearchBar";
+import NavbarIcon from "./components/NavbarIcon";
+import SearchBar from "./components/SearchBar";
 
 const Navbar = (): ReactNode => {
     return (
