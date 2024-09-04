@@ -1,9 +1,12 @@
 import { ReactNode } from "react";
-import { BackPane, Card } from "./style";
+import { BackPane, Card, CloseButtonRow } from "./style";
 import { useLockBodyScroll } from "@uidotdev/usehooks";
+import IconButton from "../../../../components/IconButton";
+import closeIcon from "../../../../assets/close.png";
 
 type ModalCardProps = {
-    children: ReactNode | ReactNode[]
+    children: ReactNode | ReactNode[],
+    toggle: () => void,
 };
 
 const ModalCard = (props: ModalCardProps): ReactNode => {
@@ -12,7 +15,9 @@ const ModalCard = (props: ModalCardProps): ReactNode => {
     return (
         <BackPane>
             <Card>
-                
+                <CloseButtonRow>
+                    <IconButton icon={ closeIcon } onClick={ props.toggle } className="relative left-3"/>
+                </CloseButtonRow>
                 { props.children }
             </Card>
         </BackPane>

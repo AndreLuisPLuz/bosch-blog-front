@@ -1,32 +1,50 @@
 import styled from "styled-components";
 
 const BackPane = styled.div`
-    position: absolute;
-    transform: translate(0, 50%);
+    position: fixed;
+    top: 0;
+    left: 0;
 
     height: 100vh;
     width: 100vw;
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 
-    background-color: rgba(0, 0, 0, 0.2);
+    padding-top: 15vh;
+
+    background-color: rgba(0, 0, 0, 0.6);
 `;
 
 const Card = styled.dialog`
+    position: relative;
+
     height: fit-content;
-    width: 40%;
+    width: 90%;
+    max-width: 400px;
 
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 2rem;
 
-    padding: 2rem;
+    padding: 1rem 2rem 1rem 2rem;
 
     border-radius: 20px;
 `;
 
-export { BackPane, Card };
+const CloseButtonRow = styled.div`
+    height: 20px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+
+    padding: 1rem 0 0 0;
+`;
+
+export { BackPane, Card, CloseButtonRow };
