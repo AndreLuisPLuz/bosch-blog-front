@@ -1,9 +1,15 @@
 import { ReactNode } from "react";
 import { Page } from "./style";
 
-const PageContent = (): ReactNode => {
+type PageContentProps = {
+    children?: ReactNode | ReactNode[]
+};
+
+const PageContent = (props: PageContentProps): ReactNode => {
     return (
-        <Page/>
+        <Page>
+            { props.children }
+        </Page>
     );
 };
 
