@@ -7,7 +7,6 @@ const NavbarOptions = (): ReactNode => {
     const [shouldLoginRender, setLoginRender] = useState(false);
 
     const toggleLoginModal = () => {
-        console.log("Toggle");
         setLoginRender(!shouldLoginRender);
     };
 
