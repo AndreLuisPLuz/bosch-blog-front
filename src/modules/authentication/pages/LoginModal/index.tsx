@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
-import ModalCard from "../../components/ModalCard";
+import ModalCard from "../../../../components/ModalCard";
 import Typography from "../../../../components/Typography";
+import ModalCardRow from "../../../../components/ModalCardRow";
 
 type LoginModalProps = {
     toggle: () => void,
@@ -8,8 +9,10 @@ type LoginModalProps = {
 
 const LoginModal = (props: LoginModalProps): ReactNode => {
     return (
-        <ModalCard toggle={ props.toggle }>
-            <Typography variant="p">Teste</Typography>
+        <ModalCard variant="form" action="/" toggle={ props.toggle }>
+            <ModalCardRow>
+                
+            </ModalCardRow>
         </ModalCard>
     );
 };

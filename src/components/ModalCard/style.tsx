@@ -18,7 +18,24 @@ const BackPane = styled.div`
     background-color: rgba(0, 0, 0, 0.6);
 `;
 
-const Card = styled.dialog`
+const DialogCard = styled.dialog`
+    position: relative;
+
+    height: fit-content;
+    width: 90%;
+    max-width: 400px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+
+    padding: 1rem 2rem 1rem 2rem;
+
+    border-radius: 20px;
+`;
+
+const FormCard = styled.form`
     position: relative;
 
     height: fit-content;
@@ -47,4 +64,4 @@ const CloseButtonRow = styled.div`
     padding: 1rem 0 0 0;
 `;
 
-export { BackPane, Card, CloseButtonRow };
+export { BackPane, DialogCard, FormCard, CloseButtonRow };
