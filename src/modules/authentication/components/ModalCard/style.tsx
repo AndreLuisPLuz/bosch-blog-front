@@ -19,6 +19,11 @@ const Card = styled.dialog`
     height: fit-content;
     width: 40%;
 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+
     padding: 2rem;
 
     border-radius: 20px;

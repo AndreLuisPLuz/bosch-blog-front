@@ -12,6 +12,7 @@ const ModalCard = (props: ModalCardProps): ReactNode => {
     return (
         <BackPane>
             <Card>
+                
                 { props.children }
             </Card>
         </BackPane>
