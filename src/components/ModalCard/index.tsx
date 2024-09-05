@@ -1,4 +1,4 @@
-import { FormEvent, FormEventHandler, ReactNode } from "react";
+import { FormEvent, ReactNode } from "react";
 import { BackPane, DialogCard, CloseButtonRow, CardForm } from "./style";
 import { useLockBodyScroll } from "@uidotdev/usehooks";
 import IconButton from "../IconButton";
