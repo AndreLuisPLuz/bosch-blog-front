@@ -1,13 +1,19 @@
-import { ReactNode } from "react";
+import { InputHTMLAttributes, ReactNode } from "react";
 import Input from "./style";
+import { match } from "ts-pattern";
 
 type LabeledInputProps = {
-    label: string
+    width?: "full" | "fit-content" | number
 };
 
-const LabeledInput = (props: LabeledInputProps): ReactNode => {
+const LabeledInput = ({ width, ...props }: LabeledInputProps & InputHTMLAttributes<HTMLInputElement>): ReactNode => {
+    const widthString = match(width)
+        .with("fit-content", () => "w-fit")
+        .with("full", () => "w-full")
+        .otherwise(() => "w" + width?.toString());
+
     return (
-        <Input placeholder={ props.label }/>
+        <Input className={`border-slate-700 ${widthString}`} { ...props }/>
     );
 };
 

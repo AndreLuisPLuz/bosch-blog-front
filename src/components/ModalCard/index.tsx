@@ -1,8 +1,8 @@
 import { ReactNode } from "react";
-import { BackPane, DialogCard, CloseButtonRow, FormCard } from "./style";
+import { BackPane, DialogCard, CloseButtonRow, CardForm } from "./style";
 import { useLockBodyScroll } from "@uidotdev/usehooks";
 import IconButton from "../IconButton";
-import closeIcon from "../../../../assets/close.png";
+import closeIcon from "../../assets/close.png";
 
 type DialogModalCardProps = {
     variant: "dialog";
@@ -46,12 +46,14 @@ const FormModalCard = (props: FormModalCardProps): ReactNode => {
 
     return (
         <BackPane>
-            <FormCard action={ props.action }>
+            <DialogCard>
                 <CloseButtonRow>
                     <IconButton icon={ closeIcon } onClick={ props.toggle } className="relative left-3"/>
                 </CloseButtonRow>
-                { props.children }
-            </FormCard>
+                <CardForm action={ props.action } method="get">
+                    { props.children }
+                </CardForm>
+            </DialogCard>
         </BackPane>
     );
 };

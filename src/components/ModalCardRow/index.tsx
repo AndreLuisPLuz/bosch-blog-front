@@ -1,16 +1,39 @@
 import { ReactNode } from "react";
-import { Row } from "./style";
+import { FlexEndRow, FlexStartRow } from "./style";
 
-type ModalCardRowProps = {
+type FlexStartVariantProps = {
+    variant: "flex-start",
     children: ReactNode | ReactNode[],
 };
 
+type FlexEndVariantProps = {
+    variant: "flex-end",
+    children: ReactNode | ReactNode[],
+};
+
+type ModalCardRowProps = FlexStartVariantProps | FlexEndVariantProps;
+
 const ModalCardRow = (props: ModalCardRowProps): ReactNode => {
+    switch (props.variant) {
+        case "flex-start": return FlexStartModalCardRow(props);
+        case "flex-end": return FlexEndModalCardRow(props);
+    }
+};
+
+const FlexStartModalCardRow = (props: FlexStartVariantProps): ReactNode => {
     return (
-        <Row>
+        <FlexStartRow>
             { props.children }
-        </Row>
+        </FlexStartRow>
     );
 };
+
+const FlexEndModalCardRow = (props: FlexEndVariantProps): ReactNode => {
+    return (
+        <FlexEndRow>
+            { props.children }
+        </FlexEndRow>
+    );
+}
 
 export default ModalCardRow;

@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 import { match } from "ts-pattern";
 
 type Variant = {
-    variant: "p" | "span",
+    variant: "p" | "span" | "h1" | "h2" | "h3",
 }
 
 type TypographyProps = {
@@ -34,6 +34,9 @@ const Typography = (props: TypographyProps & Variant): ReactNode => {
     return match (props.variant)
         .with("p", () => PTypography(props))
         .with("span", () => SpanTypography(props))
+        .with("h1", () => H1Typography(props))
+        .with("h2", () => H2Typography(props))
+        .with("h3", () => H3Typography(props))
         .exhaustive();
 };
 
@@ -50,6 +53,30 @@ const SpanTypography = (props: TypographyProps): ReactNode => {
 
     return (
         <span className={`${size} ${weight} ${style} h-fit`}>{ props.children }</span>
+    );
+};
+
+const H1Typography = (props: TypographyProps): ReactNode => {
+    const {weight, style} = fetchStyle(props);
+
+    return (
+        <h1 className={`text-4xl ${weight} ${style} h-fit`}>{ props.children }</h1>
+    );
+};
+
+const H2Typography = (props: TypographyProps): ReactNode => {
+    const {weight, style} = fetchStyle(props);
+
+    return (
+        <h2 className={`text-3xl ${weight} ${style} h-fit`}>{ props.children }</h2>
+    );
+};
+
+const H3Typography = (props: TypographyProps): ReactNode => {
+    const {weight, style} = fetchStyle(props);
+
+    return (
+        <h3 className={`text-2xl ${weight} ${style} h-fit`}>{ props.children }</h3>
     );
 };
 
