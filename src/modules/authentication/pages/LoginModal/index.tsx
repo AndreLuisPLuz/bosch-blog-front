@@ -10,6 +10,8 @@ type LoginModalProps = {
 };
 
 const LoginModal = (props: LoginModalProps): ReactNode => {
+    
+
     return (
         <ModalCard variant="form" toggle={ props.toggle }>
             <ModalCardRow variant="flex-start">
