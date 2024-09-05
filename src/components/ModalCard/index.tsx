@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { FormEvent, FormEventHandler, ReactNode } from "react";
 import { BackPane, DialogCard, CloseButtonRow, CardForm } from "./style";
 import { useLockBodyScroll } from "@uidotdev/usehooks";
 import IconButton from "../IconButton";
@@ -14,6 +14,7 @@ type FormModalCardProps = {
     variant: "form"
     action?: string;
     children: ReactNode | ReactNode[];
+    handleSubmit?: () => void;
     toggle: () => void;
 };
 
@@ -44,13 +45,22 @@ const DialogModalCard = (props: DialogModalCardProps): ReactNode => {
 const FormModalCard = (props: FormModalCardProps): ReactNode => {
     useLockBodyScroll();
 
+    const onSubmit = (e: FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+
+        if (props.handleSubmit != undefined)
+            props.handleSubmit();
+
+        props.toggle();
+    }
+
     return (
         <BackPane>
             <DialogCard>
                 <CloseButtonRow>
                     <IconButton icon={ closeIcon } onClick={ props.toggle } className="relative left-3"/>
                 </CloseButtonRow>
-                <CardForm action={ props.action } method="get">
+                <CardForm action={ props.action } method="get" onSubmit={ onSubmit }>
                     { props.children }
                 </CardForm>
             </DialogCard>
