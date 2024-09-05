@@ -1,12 +1,7 @@
-import "dotenv/config";
 import axios from "axios";
 
-const host = process.env.API_HOST;
-const port = process.env.API_PORT;
-const prefix = process.env.API_PREFIX;
-
 const blogClient = axios.create({
-    baseURL: `http://${host}:${port}${prefix}`,
+    baseURL: "http://localhost:420/api/v1",
 });
 
 export default blogClient;
