@@ -6,9 +6,9 @@ import Footer from "../../components/Footer";
 const HomePage = (): ReactNode => {
     return (
         <>
-            <Navbar/>
+            {/* <Navbar/>
             <PageContent/>
-            <Footer/>
+            <Footer/> */}
         </>
     );
 };
