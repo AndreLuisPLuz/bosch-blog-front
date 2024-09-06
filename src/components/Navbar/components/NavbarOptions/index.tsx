@@ -1,4 +1,4 @@
-import { Dispatch, ReactNode, SetStateAction, useContext, useEffect, useState } from "react";
+import { ReactNode, useContext, useEffect, useState } from "react";
 import { Container } from "./style";
 
 import NavButton from "../NavButton";

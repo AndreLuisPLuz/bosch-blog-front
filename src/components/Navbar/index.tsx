@@ -1,4 +1,4 @@
-import { Dispatch, ReactNode, SetStateAction } from "react";
+import { ReactNode } from "react";
 import { Nav } from "./style";
 import NavbarIcon from "./components/NavbarIcon";
 import SearchBar from "./components/SearchBar";

@@ -1,5 +1,5 @@
-import { ReactNode, useState } from "react";
-import { ThemeContext, ThemeProvider } from "./contexts";
+import { ReactNode } from "react";
+import { ThemeProvider } from "./contexts";
 import Navbar from "./components/Navbar";
 import PageContent from "./components/PageContent";
 
