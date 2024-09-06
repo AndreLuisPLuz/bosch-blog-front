@@ -18,4 +18,14 @@ const Nav = styled.nav`
     border-bottom: 1px solid #64748b;
 `;
 
-export { Nav };
+const LightNav = styled(Nav)`
+    background-color: #60a5fa;
+    color: #fff
+`;
+
+const DarkNav = styled(Nav)`
+    background-color: #36537e;
+    color: #fff
+`;
+
+export { LightNav, DarkNav };

@@ -11,4 +11,12 @@ const Page = styled.main`
     align-items: flex-start;
 `;
 
-export { Page };
+const LightPage = styled(Page)`
+    background-color: #fff;
+`;
+
+const DarkPage = styled(Page)`
+    background-color: #3f4044;
+`;
+
+export { LightPage, DarkPage };

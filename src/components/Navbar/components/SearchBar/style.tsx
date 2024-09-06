@@ -19,4 +19,15 @@ const Input = styled.input`
     padding:  0 2rem 0 2rem;
 `;
 
-export { Form, Input };
+const LightInput = styled(Input)`
+    background-color: #fff;
+`;
+
+const DarkInput = styled(Input)`
+    background-color: #3a4146;
+    &::placeholder {
+        color: #fff
+    }
+`;
+
+export { Form, LightInput, DarkInput };

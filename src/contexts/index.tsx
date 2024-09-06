@@ -7,7 +7,7 @@ type Theme = {
 
 const ThemeContext = createContext<Theme>({} as Theme);
 
-const ThemeProvider = (props: { children: ReactNode }): ReactNode => {
+const ThemeProvider = (props: { children: ReactNode | ReactNode[] }): ReactNode => {
     const [theme, setTheme] = useState<"light" | "dark">("dark");
 
     const toggleTheme = () => {
