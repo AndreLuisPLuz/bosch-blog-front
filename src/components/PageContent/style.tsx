@@ -1,14 +1,16 @@
 import styled from "styled-components";
 
 const Page = styled.main`
-    top: 50px;
+    position: static;
 
-    min-height: calc(100vh - 50px);
+    min-height: 100vh;
     width: 100vw;
 
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
+    padding: 50px 3rem 50px 3rem;
 `;
 
 const LightPage = styled(Page)`
